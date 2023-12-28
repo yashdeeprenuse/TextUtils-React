@@ -8,6 +8,7 @@ import Alerts from './components/Alerts';
 
 
 
+
 function App() {
   const [mode, setMode]=useState("light");
   const [alert, setAlertValue]=useState(null);
@@ -67,6 +68,8 @@ setAlertValue({
         setAlertValue(null)
       },1000)
     }
+
+    
 
   return (
     <>  
