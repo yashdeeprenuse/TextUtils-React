@@ -16,7 +16,7 @@ function App() {
 let showAlert = (setType,setMessage)=>{
 setAlertValue({
   type:setType,
-  message:setMessage
+  message:setMessage,
 })
 }
 
@@ -37,7 +37,7 @@ setAlertValue({
       setMode("light")
       document.body.style.backgroundColor= "white";
       document.body.style.color= "black";
-     
+      
         showAlert("Success","Light Mode Set Successfully");
         setTimeout(()=>{
           setAlertValue(null)
@@ -69,14 +69,28 @@ setAlertValue({
       },1000)
     }
 
-    
+//setting alert for copying text
+    let alertForCopy = (actualCopiedValue)=>{
+      showAlert(actualCopiedValue ,"Text is Copied");
+      setTimeout(()=>{
+        setAlertValue(null)
+      },1000)
+    }
+  
+//setting alert for clearing text
+ let alertForClear = ()=>{
+  showAlert("Success","Text was Cleared");
+  setTimeout(()=>{
+    setAlertValue(null)
+  },1000)
+ }
 
   return (
     <>  
     
 <Navbar title="TextUtils" about="Our Journey" modeValue={mode} takefunc={funcmode}/>
 <Alerts alert={alert} ></Alerts>
-<Textcheck  upCase={alertForUpcase} loCase={alertForLocase} addStyle={(mode==="dark")? changeStyle1:changeStyle2}> </Textcheck>
+<Textcheck  upCase={alertForUpcase} loCase={alertForLocase} copyBtn={alertForCopy} clearBtn={alertForClear} addStyle={(mode==="dark")? changeStyle1:changeStyle2}> </Textcheck>
 
     </>
   
