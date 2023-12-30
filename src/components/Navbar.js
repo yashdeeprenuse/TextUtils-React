@@ -1,14 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
-
-
 
 
 export default function Navbar(props) {
   return (
     <>
-    <nav  className={`navbar navbar-expand-lg navbar-${props.modeValue} bg-${props.modeValue}`} >
+    <nav  className={` navbar navbar-expand-lg navbar-${props.modeValue} bg-${props.modeValue}`} >
  <div className="container-fluid">
    <a className="navbar-brand" href="#">{props.title}</a>
    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,9 +15,7 @@ export default function Navbar(props) {
        <li className="nav-item">
          <a className="nav-link " aria-current="page" href="#">Home</a>
        </li>
-       <li className="nav-item">
-         <a className="nav-link" href="#">{props.about}</a>
-       </li>
+       
        <li className="nav-item dropdown">
          
          <ul className="dropdown-menu">
