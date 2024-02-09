@@ -45,6 +45,8 @@ let texArr = Array.from(text);
     }
   });
 
+  
+
   //function to copy text 
   function myFunction() {
 
@@ -112,7 +114,7 @@ let texArr = Array.from(text);
               {charValue === 0 || spValue.length === 0 ? (
                 <b> No Charecters Present</b>
               ) : (
-                <b> {spValue}</b>
+                <b>{spValue}</b>
               )}
             </li>
           </ul>

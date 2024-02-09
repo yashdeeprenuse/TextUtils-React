@@ -27,6 +27,7 @@ setAlertValue({
       document.body.style.color= "white";
      
       showAlert("Success","Dark Mode Set Successfully");
+      
       setTimeout(()=>{
         setAlertValue(null)
         },1000)
